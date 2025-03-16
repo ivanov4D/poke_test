@@ -8,7 +8,7 @@ export default class LoginPage {
     await this.page.locator('input[type="password"]').fill(password);
   }
   async clickEnterBtn() {
-    await Promise.all([this.page.waitForLoadState('networkidle')]);
+    await Promise.all([this.page.waitForLoadState('load')]);
     await this.page.click('button[type="submit"]');
     // await this.page.locator('button[type="submit"]').click();
   }
