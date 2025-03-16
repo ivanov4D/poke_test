@@ -22,8 +22,8 @@ test('Покупка рандомного аватара', async ({ page }) => {
   await expect(mailInput).toBeVisible();
   await expect(passwordInput).toBeVisible();
 
-  await mailInput.fill('');
-  await passwordInput.fill('');
+  await mailInput.fill('ivanovcgi@yandex.ru');
+  await passwordInput.fill('123456Q');
   await expect(loginButton).toBeVisible();
   await expect(loginButton).toContainText('Войти');
   await loginButton.click();
