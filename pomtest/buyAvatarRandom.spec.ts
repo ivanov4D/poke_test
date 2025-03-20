@@ -7,13 +7,13 @@ import CardPayment from '../pages/CardPaymentPage';
 import SmsPage from '../pages/SmsPage';
 import PaymentSucces from '../pages/PaymentSuccesPage';
 
-const email = '';
-const password = '';
-const cardNum = '4111111111111111';
-const cardDate = '1025';
-const cardCvv = '125';
-const cardName = 'test name';
-const verCode = '56456';
+const email = process.env.LOGIN!;
+const password = process.env.PASSWORD!;
+const cardNum = process.env.CARDNUM!;
+const cardDate = process.env.CARDDATE!;
+const cardCvv = process.env.CARDCVV!;
+const cardName = process.env.CARDNAME!;
+const verCode = process.env.VERCODE!;
 
 test('Купить рандомный аватар POM', async ({ page, baseURL }) => {
   const login = new LoginPage(page);
